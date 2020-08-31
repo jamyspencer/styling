@@ -1,0 +1,31 @@
+@use 'variables';
+@use 'mixins/general.scss' as mixins;
+
+%inverse {
+    @include mixins.inverse;
+}
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    @extend %inverse
+}
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    @extend %inverse
+}
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    @extend %inverse
+}
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    @extend %inverse
+}
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+    @extend %inverse
+}

@@ -1,0 +1,24 @@
+@use 'variables' as *;
+@use 'mixins/media-breakpoint' as *;
+@use 'sass:map';
+
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card{
+    padding: .5em;
+    border: none;
+    background-color: map.get($primary-colors, "light-grey");
+}
+
+@include media-query(md){
+    .card {
+        margin-bottom: 1em;
+        border: solid .1em map.get($primary-colors, "dark-grey");
+        border-left: solid .1em $postal-blue;
+        background-color: map.get($primary-colors, "white");
+    }
+}

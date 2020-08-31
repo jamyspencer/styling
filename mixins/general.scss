@@ -1,0 +1,9 @@
+@use '../variables.scss';
+@use 'sass:map';
+
+@mixin inverse{
+    &.inverse{
+        color: map.get(variables.$primary-colors,"white");
+        background-color: variables.$postal-blue;
+    }
+}

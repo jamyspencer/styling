@@ -1,0 +1,16 @@
+@use 'variables.scss';
+@use 'mixins/general.scss' as mixins;
+@use 'sass:map';
+
+body {
+    font-family: variables.$font-family;
+    color: variables.$postal-blue;
+    background-color: map.get(variables.$primary-colors, "white");
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    @include mixins.inverse;
+}
+
+@import 'headers';
+@import 'card';

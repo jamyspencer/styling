@@ -1,0 +1,16 @@
+{
+  "name": "postal-style",
+  "version": "0.1.0",
+  "description": "Sass project to implement USPS web styles providing a css file.",
+  "scripts": {
+    "build": "sass style.scss dist/style.css",
+    "build:min": "sass style.scss dist/style.css && csso dist/style.css > dist/style.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10",
+    "csso": "^4.0.3",
+    "csso-cli": "^3.0.0"
+  },
+  "author": "Jamy Spencer"
+}
