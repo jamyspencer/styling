@@ -8,9 +8,12 @@ body {
     background-color: map.get(variables.$primary-colors, "white");
 }
 
-button, input[type=button], input[type=reset], input[type=submit] {
-    @include mixins.inverse;
+ul, ol {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0px 5px;
 }
 
+@import 'button';
 @import 'headers';
 @import 'card';

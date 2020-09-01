@@ -1,0 +1,31 @@
+@use 'variables.scss';
+@use 'mixins/general.scss' as mixins;
+
+%button-primary {
+    &.primary {
+        color: variables.$white;
+        background-color: variables.$postal-blue;
+        @include mixins.hover(primary);
+    }
+}
+
+%button-secondary {
+    &.secondary {
+        color: variables.$postal-blue;
+        background-color: variables.$white;
+        border: 1px solid variables.$postal-blue;
+        @include mixins.hover(secondary);
+    }
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    padding: 5px 20px;
+    height: 44px;
+    border-radius: 5px;
+    font-size: 16px;
+    border-color: transparent;
+    border-width: 1px;
+    @extend %button-primary;
+    @extend %button-secondary;
+    @include mixins.disabled;
+}

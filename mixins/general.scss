@@ -1,9 +1,33 @@
 @use '../variables.scss';
 @use 'sass:map';
 
-@mixin inverse{
-    &.inverse{
-        color: map.get(variables.$primary-colors,"white");
+@mixin inverse {
+    &.inverse {
+        color: variables.$white;
         background-color: variables.$postal-blue;
+    }
+}
+
+@mixin disabled {
+    &:disabled {
+        color: variables.$grey;
+        background-color: variables.$dark-grey;
+    }
+}
+
+@mixin hover($type) {
+    @if $type == primary{
+        &:hover {
+            color: variables.$postal-blue;
+            background-color: variables.$hover-grey;
+        }
+    } 
+    @else if $type == secondary {
+        &:hover {
+            background-color: variables.$hover-grey;
+        }
+    }
+    @else {
+        @warn "Unknown hover type: #{$type}"
     }
 }
